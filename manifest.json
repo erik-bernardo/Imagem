@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Matheusificador",
+  "version": "1.0",
+  "description": "Substitui todas as imagens da web por matheus.png",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["matheus.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
